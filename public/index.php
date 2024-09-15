@@ -12,8 +12,6 @@ use Twig\Loader\FilesystemLoader;
 
     require __DIR__ . '/../vendor/autoload.php';
 
-    Handler::setup();
-
     $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
     $dotenv->load();
 
@@ -27,5 +25,6 @@ use Twig\Loader\FilesystemLoader;
 
     $request = CdxRequest::capture();
     $response = App::getInstance($routesPath, $twig)->handle($request);
+    Handler::setup();
     /** @var Response $response */
     $response->sendContent();
