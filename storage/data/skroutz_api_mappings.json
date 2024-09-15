@@ -1,0 +1,28 @@
+{
+  "ref_eshop": [
+    {
+      "merchant_product_id" : 204661751,
+      "skroutz_page_url" : "https://www.skroutz.gr/s/48096229/Tommee-Tippee-Deluxe-Light-Sound-Sleep-Aid-Ollie-Owl-apo-Yfasma-me-%CE%99chous-gia-Neogennita-30022WF.html",
+      "skroutz_page_product_id" : 48096229,
+      "title" : "Mini Ollie",
+      "eshop_product_id" : 3921,
+      "auto_update" : false
+    },
+    {
+      "merchant_product_id" : "",
+      "skroutz_page_url" : "https://www.skroutz.gr/s/45822834/Tommee-Tippee-Deluxe-Light-Sound-Sleep-Aid-Ollie-Owl-apo-Yfasma-me-%CE%99chous-gia-Neogennita.html",
+      "skroutz_page_product_id" : 45822834,
+      "title" : "Tommee Tippee Deluxe Light & Sound Sleep Aid Ollie Owl από Ύφασμα με Ήχους για Νεογέννητα",
+      "eshop_product_id" : 3941,
+      "auto_update" : false
+    },
+    {
+      "merchant_product_id" : "",
+      "skroutz_page_url" : "https://www.skroutz.gr/s/42956656/Grobag-Kremasto-Paichnidi-Kounias-kai-Karotsiou-me-Mousiki-Pip-Panda-gia-Neogennita.html",
+      "skroutz_page_product_id" : 42956656,
+      "title" : "Grobag Κρεμαστό Παιχνίδι Κούνιας και Καροτσιού με Μουσική Pip-Panda για Νεογέννητα",
+      "eshop_product_id" : 11520,
+      "auto_update" : false
+    }
+  ]
+}

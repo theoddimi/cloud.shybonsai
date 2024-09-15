@@ -1,0 +1,33 @@
+{% extends "layouts/base.twig" %}
+{% block title %}home{% endblock %}
+{% block head %}
+
+{% endblock head %}
+
+{% block content %}
+    <h1>Products needs attention at SKROUTZ</h1>
+    <p class="important">
+        List of products not at first position
+    </p>
+
+    {% for key,product in products_updated %}
+        {% if product['product_new_price_percentage_profit_after_commission'] < 25 %}
+            {% set final_percentage_profit_class = 'low_profit' %}
+        {% else %}
+            {% set final_percentage_profit_class = 'normal_profit' %}
+        {% endif %}
+        {% if product['dry_run'] is same as(true) %}
+            <h2>[NOTIFY ONLY]</h2>
+        {% endif %}
+        <ul>
+            <li>Product: {{ product['product_title'] }}</li>
+            <li>Product Code: {{ product['product_code'] }}</li>
+            <li>Lowest price at skroutz: {{ product['product_lowest_price_skroutz'] }}&#8364;</li>
+            <li>Product potential price: {{ product['product_new_price'] }}&#8364;</li>
+            <li>Product potential price profit: {{ product['product_new_price_percentage_profit'] }}%</li>
+            <li>Product potential price profit after skroutz commission: <span class="{{ final_percentage_profit_class }}">{{ product['product_new_price_percentage_profit_after_commission'] }}%</span></li>
+            <li>Product skroutz url <a href="{{ product['product_page_url'] }}">{{  product['product_title'] }}</a></li>
+        </ul>
+    {% endfor %}
+{% endblock %}
+
