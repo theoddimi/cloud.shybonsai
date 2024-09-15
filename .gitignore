@@ -3,3 +3,4 @@
 vendor
 /logs/
 /xml/
+/node_modules
