@@ -5,7 +5,10 @@ const fs = require('fs');
     // Get the parameter from the command-line arguments
     const url = process.argv[2];
 // console.log(url);
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        headless: true, // or false if you want to see the browser
+        args: ['--no-sandbox', '--disable-setuid-sandbox'] // Important!
+    });
     const page = await browser.newPage();
 
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3');

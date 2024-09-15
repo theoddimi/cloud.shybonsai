@@ -77,7 +77,7 @@ class HomeController
             /** END - Product from eshop and oxygen */
 
             $urlToScrap = escapeshellarg(data_get($product,'skroutz_page_url'));
-            $nodeCommand = $_SERVER['DOCUMENT_ROOT'] . '/resources/js/crawl.cjs ' . $urlToScrap;
+            $nodeCommand = $_SERVER['DOCUMENT_ROOT'] . '/../resources/js/crawl.cjs ' . $urlToScrap;
             $output = shell_exec('node ' . $nodeCommand);
             $pattern = '/(\d+,\d+)/';
 
