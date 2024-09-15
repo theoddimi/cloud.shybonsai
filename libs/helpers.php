@@ -158,7 +158,7 @@ if (! function_exists('env')) {
 if (! function_exists('config')) {
     function config(string $configName, string $key): int|string|array|null
     {
-        $configAbsPath = $_SERVER['DOCUMENT_ROOT'] . '/../config/';
+        $configAbsPath = $_SERVER['DOCUMENT_ROOT'] . '/config/';
         $configFileOnDemand = $configAbsPath . $configName . '.php';
 
         if (file_exists($configFileOnDemand)) {
